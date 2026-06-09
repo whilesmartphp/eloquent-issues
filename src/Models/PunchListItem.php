@@ -2,11 +2,12 @@
 
 namespace Whilesmart\Issues\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class PunchListItem
+class PunchListItem extends Model
 {
-    protected array $fillable = [
+    protected $fillable = [
         'issue_id',
         'title',
         'description',

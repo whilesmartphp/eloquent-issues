@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Whilesmart\\Isssues\\": "src/"
+      "Whilesmart\\Issues\\": "src/"
     }
   },
   "autoload-dev": {
