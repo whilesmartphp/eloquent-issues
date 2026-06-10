@@ -14,7 +14,6 @@ return new class () extends Migration {
             $table->text('description')->nullable();
             $table->timestamp('due_date')->nullable();
             $table->string('status')->default('pending');
-            $table->nullableMorphs('assignee');
             $table->morphs('creator');
             $table->json('meta')->nullable()->comment('Additional info like geo-coordinates');
             $table->timestamps();

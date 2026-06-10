@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property int $id
+ * @property string $title
  * @property string $issuable_type
  * @property int $issuable_id
  * @property string $type
@@ -34,6 +35,7 @@ class Issue extends Model
         'issuable_type',
         'issuable_id',
         'type',
+        'title',
         'description',
         'severity',
         'status',
@@ -68,8 +70,8 @@ class Issue extends Model
         return $this->morphTo();
     }
 
-    public function assignee(): MorphTo
+    public function assignments(): HasMany
     {
-        return $this->morphTo();
+        return $this->hasMany(IssueAssignment::class, 'issue_id');
     }
 }

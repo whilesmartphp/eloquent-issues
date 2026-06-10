@@ -6,6 +6,7 @@ namespace Workbench\App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Whilesmart\Issues\Traits\HasIssue;
 
 class User extends Authenticatable
 {
@@ -13,6 +14,7 @@ class User extends Authenticatable
     use HasFactory;
 
     use Notifiable;
+    use HasIssue;
 
     /**
      * The attributes that are mass assignable.
